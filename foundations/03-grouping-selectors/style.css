@@ -1,0 +1,19 @@
+/* External CSS */
+
+/* grouping selector - applies to both elements */
+.class-1,
+.class-2 {
+    font-size: 28px;
+    font-family: "Helvetica", "Times New Roman", "sans-serif";
+}
+
+/* class unique to first element */
+.class-1 {
+    background-color: black;
+    color: white;
+}
+
+/* class unique to second element */
+.class-2 {
+    background-color: yellow;
+}

@@ -8,16 +8,18 @@ body{
   font-weight: 800;
 }
 
+/* swapped around order of '.para' and '.small-para' class selectors */
+.para {
+  font-size: 22px;
+}
+
 .small-para {
   font-size: 14px;
   font-weight: 800;
 }
 
-.para {
-  font-size: 22px;
-}
-
-.confirm {
+/* used ID selector '#confirm-button' instead of just class selector '.confirm' */
+#confirm-button {
   background: green;
   color: white;
   font-weight: bold;
@@ -29,7 +31,8 @@ body{
   font-size: 20px;
 }
 
-.child {
+/* added 2 more class selectors: 'div.' and 'text.'  for specificity */
+div.text.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
