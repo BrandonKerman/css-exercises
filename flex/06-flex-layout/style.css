@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +19,9 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  /* padding = 8px top border, 16px right border */
+  padding: 8px 16px;
 }
 
 input {
@@ -24,4 +30,36 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.content {
+  flex: 1; /* makes each of the items grow to fill the available space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+a {
+  color: #666;
+  text-decoration: none; /* link styling to get rid of underline (and other) decorations */
+}
+
+ul {
+  list-style-type: none; /* removes list bullets from unordered list items */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
 }

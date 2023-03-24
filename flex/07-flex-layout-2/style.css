@@ -2,27 +2,79 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+
+  display: flex;
+  font-size: 32px; /* header text size is 32px */
+  font-weight: 900; /* header text weight is 900 */
+  align-items: center; /* header text is vertically centered */
+  padding: 0 16px; /* header text is 16px from the edge of the screen */
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+
+  display: flex;
+  align-items: center; /* footer text is vertically centered */
+  justify-content: center; /* footer text is horizontally centered */
+}
+
+.body {
+  flex: 1;
+  display: flex;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
+
+  flex-shrink: 0; /* the sidebar is 300px wide (and it doesn't shrink) */
+  padding: 16px;
+}
+
+a {
+  font-size: 24px; /* sidebar links are size 24px */
+  color: white; /* sidebar links are white */
+  text-decoration: none; /* sidebar link styling to get rid of underline (and other) decorations */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0; /* aligns items closer to the top of sidebar */
+  padding: 0; /* aligns items closer to the left of sidebar */
+}
+
+li {
+  margin-bottom: 16px; /* creates space in between the list items on top of each other */
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+}
+
+.content {
+  display: flex;
+  flex: 1; /* the sidebar and cards take up all available space above the footer */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
 }
